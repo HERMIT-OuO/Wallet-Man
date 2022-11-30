@@ -1,0 +1,21 @@
+
+.hover-button.data-v-81d0c33c {
+		position: fixed;
+		right: 20px;
+		bottom: 5%;
+}
+.button-img.data-v-81d0c33c {
+		width: 50px;
+		height: 50px;
+		
+		background-color: #0066ff;
+		
+		border-radius: 50%;
+}
+	
+	/* .button-img:hover {
+		background-color: #002233;
+	} */
+.button-img.data-v-81d0c33c:active {
+		background-color: #002233;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "money-card": "../../components/MoneyCard/MoneyCard",
+    "hover-button": "../../components/HoverButton/HoverButton"
+  }
+}

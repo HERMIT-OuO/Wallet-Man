@@ -1,0 +1,1 @@
+<view class="status-bar"></view><view class="index-container"><text class="index-h1">Wallet Man</text><view class="index-swiper"><money-card wx:if="{{a}}" u-i="7d3631c9-0" bind:__l="__l" u-p="{{a}}"></money-card></view><hover-button u-i="7d3631c9-1" bind:__l="__l"></hover-button></view>
