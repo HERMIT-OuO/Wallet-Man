@@ -15,7 +15,10 @@
 				<MoneyCard title="我的净资产" number="1000.00"></MoneyCard>
 			</swiper-item>
 		</swiper> -->
-		<HoverButton></HoverButton>
+		<HoverButton @click="openPop"></HoverButton>
+		<uni-popup ref="popup" type="bottom">
+			<Calculator></Calculator>
+		</uni-popup>
 	</view>
 </template>
 
@@ -24,7 +27,10 @@
 		reactive,
 		toRefs,
 		onBeforeMount,
-		onMounted
+		onMounted,
+		ref,
+		nextTick 
+		// getCurrentInstance
 	} from 'vue'
 	interface DataProps {
 		// swape 组件前边距
@@ -47,7 +53,6 @@
 			}
 			const swapeChange = (e: any): void => {
 				console.log(e)
-
 				if (e?.detail.current === 0) {
 					data.pMargin = '0px';
 					data.nMargin = '15px';
@@ -56,10 +61,19 @@
 					data.nMargin = '0px';
 				}
 			}
+			// 开启 Pop
+			// const vm = getCurrentInstance() || null;
+			let popup = ref(null)
+			const openPop = () => {
+				console.log(popup);
+				popup.value.open();
+			}
 			const refData = toRefs(data);
 			return {
 				scroll,
 				swapeChange,
+				openPop,
+				popup,
 				...refData,
 			}
 

@@ -40,22 +40,33 @@ const _sfc_main = {
         data.nMargin = "0px";
       }
     };
+    let popup = common_vendor.ref(null);
+    const openPop = () => {
+      console.log(popup);
+      popup.value.open();
+    };
     const refData = common_vendor.toRefs(data);
     return __spreadValues({
       scroll,
-      swapeChange
+      swapeChange,
+      openPop,
+      popup
     }, refData);
   }
 };
 if (!Array) {
   const _easycom_MoneyCard2 = common_vendor.resolveComponent("MoneyCard");
   const _easycom_HoverButton2 = common_vendor.resolveComponent("HoverButton");
-  (_easycom_MoneyCard2 + _easycom_HoverButton2)();
+  const _easycom_Calculator2 = common_vendor.resolveComponent("Calculator");
+  const _easycom_uni_popup2 = common_vendor.resolveComponent("uni-popup");
+  (_easycom_MoneyCard2 + _easycom_HoverButton2 + _easycom_Calculator2 + _easycom_uni_popup2)();
 }
 const _easycom_MoneyCard = () => "../../components/MoneyCard/MoneyCard.js";
 const _easycom_HoverButton = () => "../../components/HoverButton/HoverButton.js";
+const _easycom_Calculator = () => "../../components/Calculator/Calculator.js";
+const _easycom_uni_popup = () => "../../uni_modules/uni-popup/components/uni-popup/uni-popup.js";
 if (!Math) {
-  (_easycom_MoneyCard + _easycom_HoverButton)();
+  (_easycom_MoneyCard + _easycom_HoverButton + _easycom_Calculator + _easycom_uni_popup)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
@@ -66,6 +77,11 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       item1: "2000.00",
       text2: "\u672C\u6708\u7ED3\u4F59",
       item2: "1000.00"
+    }),
+    b: common_vendor.o($setup.openPop),
+    c: common_vendor.sr("popup", "7d3631c9-2"),
+    d: common_vendor.p({
+      type: "bottom"
     })
   };
 }
